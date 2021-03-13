@@ -114,4 +114,4 @@ if (message.content.toLowerCase() === 'n/ap') {
 });
 
  
-client.login('ODE5NTQxNDIzOTUwNTI4NTcy.YEoHbQ.4EQOFyyNTXCJyIBPYkYWqOSKA-g');
+client.login('ODE5NTQxNDIzOTUwNTI4NTcy.YEoHbQ.RrgPnjCush7bZLIvQUKnP6j5oZU');
