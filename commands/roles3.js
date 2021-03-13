@@ -1,21 +1,21 @@
 module.exports = {
-    name: 'roles',
+    name: 'roles3',
     description: "Sets up a reaction role message!",
     async execute(message, args, Discord, client) {
         const channel = '820020543750144040';
-        const yellowTeamRole = message.guild.roles.cache.find(role => role.name === "👩 Mergina");
-        const blueTeamRole = message.guild.roles.cache.find(role => role.name === "🧑 Bahuras");
+        const yellowTeamRole = message.guild.roles.cache.find(role => role.name === "❤ Užimtas");
+        const blueTeamRole = message.guild.roles.cache.find(role => role.name === "💔Laisvas");
  
-        const yellowTeamEmoji = '👧';
-        const blueTeamEmoji = '👦';
+        const yellowTeamEmoji = '❤️';
+        const blueTeamEmoji = '💔';
  
         let embed = new Discord.MessageEmbed()
             .setColor('#7605ff')
             .setTitle('Klausimanija')
             .setThumbnail('https://cdn.discordapp.com/attachments/808331179781652500/819614924221055076/20210311_185636.gif')
-            .setDescription('Kokia tavo lytis :face_with_monocle:, Pasirink !\n\n'
-                + `${yellowTeamEmoji}Jei Mergaite\n`
-                + `${blueTeamEmoji} Jei Bahuras`);
+            .setDescription('Kiek tau metų :face_with_monocle:, Pasirink !\n\n'
+                + `${yellowTeamEmoji}Jei Tu esi užimtas\n`
+                + `${blueTeamEmoji} Jei tu esi laisvas`);
  
         let messageEmbed = await message.channel.send(embed);
         messageEmbed.react(yellowTeamEmoji);

@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION" ]});
- 
+
 const prefix = 'n/';
  
 const fs = require('fs');
@@ -20,18 +20,18 @@ for(const file of commandFiles){
  
  
 client.once('ready', () => {
-    console.log('NoNmis online!');
+    console.log('Oh yes daddy!');
     let statuses = [
         "   dsc.gg/nonm",
         "  Reklamuosi?!? BAN!",
-        "  Esi laukiamas visasda!",
+        "  Esi laukiamas visada!",
         "  NoNm"
         
     
     ]
     setInterval(function(){
             let status = statuses[Math.floor(Math.random() * statuses.length)];
-            client.user.setActivity(status, {type:"WATCHING"})
+            client.user.setActivity(status, {type:"STREAMING"})
     
         }, 3000)
 });
@@ -60,6 +60,12 @@ client.on('message', message =>{
         client.commands.get('paleisti').execute(message, args);
     } else if(command === 'iseiti'){
         client.commands.get('iseiti').execute(message, args);
+    } else if(command === 'say'){
+        client.commands.get('say').execute(bot, message, args);
+    } else if(command === 'roles2'){
+        client.commands.get('roles2').execute(message, args, Discord, client);
+    } else if(command === 'roles3'){
+        client.commands.get('roles3').execute(message, args, Discord, client);
     }
 
     if (message.content.toLowerCase() === 'n/pagalba') {
@@ -68,8 +74,8 @@ client.on('message', message =>{
         .setURL('https://dsc.gg/nonm')
         .setAuthor('')
         .setDescription('Dėl didesnės pagalbos kreipkites pas administracija!')
-        .setColor('#ffbf00')
-        .setThumbnail('https://cdn.discordapp.com/attachments/819540565661450273/819542068295762031/GIS-developer-types-FIG-2-e1505225536728.jpg')
+        .setColor('#7605ff')
+        .setThumbnail('https://cdn.discordapp.com/attachments/808331179781652500/819614924221055076/20210311_185636.gif')
         .setImage('https://imgur.comffGxVIL')
         .setTimestamp()
         .setFooter('NoNm')
@@ -89,8 +95,8 @@ if (message.content.toLowerCase() === 'n/ap') {
     .setURL('https://dsc.gg/nonm')
     .setAuthor('')
     .setDescription('Dėl didesnes informacijos kreipkites į administracija, ar savininkus!')
-    .setColor('#ffbf00')
-    .setThumbnail('https://cdn.discordapp.com/attachments/819540565661450273/819542068295762031/GIS-developer-types-FIG-2-e1505225536728.jpg')
+    .setColor('#7605ff')
+    .setThumbnail('https://cdn.discordapp.com/attachments/808331179781652500/819614924221055076/20210311_185636.gif')
     .setImage('https://imgur.comffGxVIL')
     .setTimestamp()
     .setFooter('NoNm')
@@ -103,6 +109,9 @@ if (message.content.toLowerCase() === 'n/ap') {
 
     message.channel.send(embed);
 
-}});
+}
+
+});
+
  
 client.login('ODE5NTQxNDIzOTUwNTI4NTcy.YEoHbQ.4EQOFyyNTXCJyIBPYkYWqOSKA-g');
